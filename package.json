@@ -1,0 +1,14 @@
+{
+    "name": "@moneyhut/monorepo",
+    "engines": {
+        "pnpm": "7.x.x",
+        "npm": "use pnpm",
+        "yarn": "use pnpm"
+    },
+    "scripts": {
+        "postinstall": "ignore-sync ."
+    },
+    "devDependencies": {
+        "ignore-sync": "6.0.2"
+    }
+}
