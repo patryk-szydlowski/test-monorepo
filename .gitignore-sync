@@ -9,3 +9,4 @@ Global/JetBrains.gitignore
 [inline]
 .idea/
 .vscode/
+.fleet/
