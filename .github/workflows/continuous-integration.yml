@@ -1,28 +1,55 @@
 name: CI
 on:
-  push: true
-  pull_request: true
+  push: null
+  pull_request: null
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
-  setup_environment:
+  setup-environment:
     name: Setup environment
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+      - name: Setup environment
+        uses: ./.github/actions/setup-environment
 
-      - name: Install NodeJS
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: .node-version
-          cache: pnpm
+  prettier:
+    name: Prettier
+    runs-on: ubuntu-latest
+    needs:
+      - setup-environment
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Setup environment
+        uses: ./.github/actions/setup-environment
+
+      - name: Run Prettier on workspace packages
+        uses: pnpm --recursive lint:prettier
+
+      - name: Run Prettier on workspace root
+        uses: pnpm --workspace-root lint:prettier
+
+  eslint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    needs:
+      - setup-environment
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-environment
+
+      - name: Run ESLint on workspace packages
+        uses: pnpm --recursive lint:eslint
+
+      - name: Run ESLint on workspace root
+        uses: pnpm --workspace-root lint:eslint

@@ -1,0 +1,3 @@
+{
+  "extends": "@moneyhut/typescript/solid.json"
+}
