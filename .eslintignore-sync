@@ -1,0 +1,6 @@
+[local]
+.gitignore-sync
+
+[inline]
+pnpm-lock.yaml
+!.github/

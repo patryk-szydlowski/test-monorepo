@@ -2,26 +2,24 @@
   "name": "@moneyhut/monorepo",
   "packageManager": "pnpm@7.17.0",
   "engines": {
+    "node": "16.18.1",
     "pnpm": "7.17.0",
     "npm": "use pnpm",
     "yarn": "use pnpm"
   },
   "scripts": {
+    "lint:prettier": "prettier --check .",
+    "lint:eslint": "eslint --max-warnings 0 .",
     "postinstall": "ignore-sync ."
   },
+  "dependencies": {},
   "devDependencies": {
     "ignore-sync": "6.0.2",
-    "@babel/core": "7.20.2",
-    "@storybook/addon-actions": "6.5.13",
-    "@storybook/addon-essentials": "6.5.13",
-    "@storybook/addon-interactions": "6.5.13",
-    "@storybook/addon-links": "6.5.13",
-    "@storybook/addon-postcss": "2.0.0",
-    "@storybook/builder-webpack5": "6.5.13",
-    "@storybook/jest": "0.0.10",
-    "@storybook/manager-webpack5": "6.5.13",
-    "@storybook/react": "6.5.13",
-    "@storybook/test-runner": "0.9.1",
-    "@storybook/testing-library": "0.0.13"
+    "typescript": "4.9.3",
+    "prettier": "2.8.0",
+    "eslint": "8.28.0",
+    "@moneyhut/prettier": "workspace:*",
+    "@moneyhut/eslint-config": "workspace:*",
+    "@moneyhut/typescript": "workspace:*"
   }
 }
