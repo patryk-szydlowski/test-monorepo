@@ -1,7 +1,6 @@
 const { defineConfig } = require("eslint-define-config");
 
 module.exports = defineConfig({
-  plugins: ["@typescript-eslint", "github"],
   overrides: [
     {
       files: ["*.js", "*.cjs", "*.mjs", "*.ts", "*.cts", "*.jsx", "*.tsx"],
@@ -13,9 +12,11 @@ module.exports = defineConfig({
           "packages/*/tsconfig.json",
         ],
       },
+      plugins: ["@typescript-eslint", "import", "github"],
       extends: [
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "plugin:@typescript-eslint/strict",
+        "plugin:import/typescript",
         "plugin:github/typescript",
       ],
     },
