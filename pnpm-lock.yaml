@@ -26,6 +26,7 @@ importers:
     specifiers:
       '@html-eslint/eslint-plugin': 0.15.0
       '@html-eslint/parser': 0.15.0
+      '@moneyhut/prettier-config': workspace:*
       '@moneyhut/typescript': workspace:*
       '@types/node': 18.11.9
       '@typescript-eslint/eslint-plugin': 5.44.0
@@ -86,6 +87,7 @@ importers:
       eslint-plugin-yml: 1.2.0_eslint@8.28.0
       typescript: 4.9.3
     devDependencies:
+      '@moneyhut/prettier-config': link:../prettier-config
       '@moneyhut/typescript': link:../typescript
       '@types/node': 18.11.9
 

@@ -5,12 +5,7 @@ module.exports = defineConfig({
     {
       files: ["*.js", "*.cjs", "*.mjs", "*.ts", "*.cts", "*.jsx", "*.tsx"],
       parserOptions: {
-        project: [
-          "apps/*/tsconfig.json",
-          "configs/*/tsconfig.json",
-          "features/*/tsconfig.json",
-          "packages/*/tsconfig.json",
-        ],
+        project: ["**/tsconfig.json"],
       },
       plugins: ["@typescript-eslint", "import", "github"],
       extends: [

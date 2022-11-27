@@ -5,7 +5,8 @@
     "node": "16.18.1"
   },
   "scripts": {
-    "lint": "eslint --max-warnings 0 ."
+    "lint:prettier": "prettier --check .",
+    "lint:eslint": "eslint --max-warnings 0 ."
   },
   "dependencies": {
     "@html-eslint/eslint-plugin": "0.15.0",
