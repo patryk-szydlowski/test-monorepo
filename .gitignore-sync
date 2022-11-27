@@ -6,7 +6,5 @@ Global/Linux.gitignore
 Global/VisualStudioCode.gitignore
 Global/JetBrains.gitignore
 
-[inline]
-.idea/
-.vscode/
-.fleet/
+[local]
+configs/gitignore/ide.gitignore

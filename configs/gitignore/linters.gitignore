@@ -1,0 +1,16 @@
+# Include Github directory
+!.github/
+
+# Skip linting plain text config files
+.editorconfig
+.eslintignore
+.eslintignore-sync
+.gitignore
+.gitignore-sync
+.prettierignore
+.prettierignore-sync
+.node-version
+.npmrc
+
+# Skip lockfile
+pnpm-lock.yaml

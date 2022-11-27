@@ -8,16 +8,16 @@
     "yarn": "use pnpm"
   },
   "scripts": {
-    "lint:prettier": "prettier --check '{*,!(apps|configs|features|packages)/**}'",
-    "lint:eslint": "eslint --max-warnings 0 '{*,!(apps|configs|features|packages)/**}'",
-    "postinstall": "ignore-sync ."
+    "lint:prettier": "prettier --check '{.,!(apps|configs|features|packages)/**}'",
+    "lint:eslint": "eslint --max-warnings 0 '{.,!(apps|configs|features|packages)/**}'",
+    "postinstall": "is-ci || ignore-sync ."
   },
-  "dependencies": {},
   "devDependencies": {
     "ignore-sync": "6.0.2",
     "typescript": "4.9.3",
     "prettier": "2.8.0",
     "eslint": "8.28.0",
+    "is-ci": "3.0.1",
     "@moneyhut/prettier-config": "workspace:*",
     "@moneyhut/eslint-config": "workspace:*",
     "@moneyhut/typescript": "workspace:*"
