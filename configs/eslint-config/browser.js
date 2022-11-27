@@ -1,9 +1,5 @@
 const { defineConfig } = require("eslint-define-config");
 
-const conflictingReactRules = {
-  "react/react-in-jsx-scope": "off",
-};
-
 module.exports = defineConfig({
   env: {
     browser: true,
@@ -18,6 +14,7 @@ module.exports = defineConfig({
     "plugin:solid/typescript",
   ],
   rules: {
-    ...conflictingReactRules,
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": ["error", { extensions: ["*.jsx", ".tsx"] }],
   },
 });
