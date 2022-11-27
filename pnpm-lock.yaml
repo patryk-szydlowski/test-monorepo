@@ -5,7 +5,7 @@ importers:
   .:
     specifiers:
       '@moneyhut/eslint-config': workspace:*
-      '@moneyhut/prettier': workspace:*
+      '@moneyhut/prettier-config': workspace:*
       '@moneyhut/typescript': workspace:*
       eslint: 8.28.0
       ignore-sync: 6.0.2
@@ -13,7 +13,7 @@ importers:
       typescript: 4.9.3
     devDependencies:
       '@moneyhut/eslint-config': link:configs/eslint-config
-      '@moneyhut/prettier': link:configs/prettier
+      '@moneyhut/prettier-config': link:configs/prettier-config
       '@moneyhut/typescript': link:configs/typescript
       eslint: 8.28.0
       ignore-sync: 6.0.2
@@ -25,6 +25,7 @@ importers:
       '@html-eslint/eslint-plugin': 0.15.0
       '@html-eslint/parser': 0.15.0
       '@moneyhut/typescript': workspace:*
+      '@types/node': 18.11.9
       '@typescript-eslint/eslint-plugin': 5.44.0
       '@typescript-eslint/parser': 5.44.0
       eslint: '*'
@@ -82,8 +83,9 @@ importers:
       typescript: 4.9.3
     devDependencies:
       '@moneyhut/typescript': link:../typescript
+      '@types/node': 18.11.9
 
-  configs/prettier:
+  configs/prettier-config:
     specifiers: {}
 
   configs/typescript:
@@ -222,6 +224,10 @@ packages:
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: false
+
+  /@types/node/18.11.9:
+    resolution: {integrity: sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==}
+    dev: true
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}

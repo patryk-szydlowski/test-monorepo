@@ -1,7 +1,6 @@
 {
   "name": "@moneyhut/eslint-config",
   "private": true,
-  "type": "commonjs",
   "engines": {
     "node": "16.18.1"
   },
@@ -36,6 +35,7 @@
     "typescript": "*"
   },
   "devDependencies": {
+    "@types/node": "18.11.9",
     "@moneyhut/typescript": "workspace:*"
   }
 }

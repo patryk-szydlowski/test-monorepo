@@ -42,6 +42,7 @@ module.exports = defineConfig({
     "plugin:eslint-comments/recommended",
   ],
   rules: {
+    "sort-keys": "off",
     "import/first": "error",
     "import/no-deprecated": "error",
     "import/no-mutable-exports": "error",
@@ -58,6 +59,8 @@ module.exports = defineConfig({
     "import/no-unassigned-import": "error",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
+    "functional/functional-parameters": ["error", { enforceParameterCount: false }],
+    "functional/no-expression-statement": ["error", { ignoreVoid: true }],
     "eslint-comments/no-use": "error",
     "eslint-comments/require-description": "error",
     "no-secrets/no-secrets": "error",
