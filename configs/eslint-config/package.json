@@ -4,6 +4,9 @@
   "engines": {
     "node": "16.18.1"
   },
+  "scripts": {
+    "lint": "eslint --max-warnings 0 ."
+  },
   "dependencies": {
     "@html-eslint/eslint-plugin": "0.15.0",
     "@html-eslint/parser": "0.15.0",
@@ -21,6 +24,7 @@
     "eslint-plugin-json-schema-validator": "4.0.3",
     "eslint-plugin-jsonc": "2.5.0",
     "eslint-plugin-jsx-a11y": "6.6.1",
+    "eslint-plugin-markdownlint": "0.4.0",
     "eslint-plugin-no-secrets": "0.8.9",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "6.1.1",
@@ -35,7 +39,7 @@
     "typescript": "*"
   },
   "devDependencies": {
-    "@types/node": "18.11.9",
-    "@moneyhut/typescript": "workspace:*"
+    "@moneyhut/typescript": "workspace:*",
+    "@types/node": "18.11.9"
   }
 }

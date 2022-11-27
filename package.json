@@ -8,8 +8,8 @@
     "yarn": "use pnpm"
   },
   "scripts": {
-    "lint:prettier": "prettier --check .",
-    "lint:eslint": "eslint --max-warnings 0 .",
+    "lint:prettier": "prettier --check '{*,!(apps|configs|features|packages)/**}'",
+    "lint:eslint": "eslint --max-warnings 0 '{*,!(apps|configs|features|packages)/**}'",
     "postinstall": "ignore-sync ."
   },
   "dependencies": {},

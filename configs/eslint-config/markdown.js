@@ -3,10 +3,9 @@ const { defineConfig } = require("eslint-define-config");
 module.exports = defineConfig({
   overrides: [
     {
-      files: ["*.html"],
-      parser: "@html-eslint/parser",
-      plugins: ["@html-eslint"],
-      extends: ["plugin:@html-eslint/recommended"],
+      files: ["*.md"],
+      parser: "eslint-plugin-markdownlint/parser",
+      extends: ["plugin:markdownlint/recommended"],
       rules: {
         "prettier/prettier": "off",
       },
