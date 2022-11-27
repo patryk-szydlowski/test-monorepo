@@ -35,10 +35,10 @@ jobs:
         uses: ./.github/actions/setup-environment
 
       - name: Run Prettier on workspace packages
-        uses: pnpm --recursive lint:prettier
+        run: pnpm --recursive lint:prettier
 
       - name: Run Prettier on workspace root
-        uses: pnpm --workspace-root lint:prettier
+        run: pnpm --workspace-root lint:prettier
 
   eslint:
     name: ESLint
@@ -53,7 +53,7 @@ jobs:
         uses: ./.github/actions/setup-environment
 
       - name: Run ESLint on workspace packages
-        uses: pnpm --recursive lint:eslint
+        run: pnpm --recursive lint:eslint
 
       - name: Run ESLint on workspace root
-        uses: pnpm --workspace-root lint:eslint
+        run: pnpm --workspace-root lint:eslint
