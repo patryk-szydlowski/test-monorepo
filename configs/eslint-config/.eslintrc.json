@@ -1,4 +1,4 @@
 {
-  "root": true,
-  "extends": ["./index.js", "./typescript.js", "./node.js", "./json.js", "./prettier.js"]
+  "extends": ["./index.js", "./typescript.js", "./node.js", "./json.js", "./prettier.js"],
+  "root": true
 }

@@ -2,8 +2,8 @@
   "name": "@moneyhut/typescript",
   "private": true,
   "scripts": {
-    "lint:prettier": "prettier --check .",
-    "lint:eslint": "eslint --max-warnings 0 ."
+    "lint:eslint": "eslint --max-warnings 0 .",
+    "lint:prettier": "prettier --check ."
   },
   "devDependencies": {
     "@moneyhut/eslint-config": "workspace:*"

@@ -1,5 +1,4 @@
 {
-  "root": true,
   "extends": [
     "@moneyhut/eslint-config",
     "@moneyhut/eslint-config/prettier",
@@ -7,5 +6,6 @@
     "@moneyhut/eslint-config/yaml",
     "@moneyhut/eslint-config/toml",
     "@moneyhut/eslint-config/markdown"
-  ]
+  ],
+  "root": true
 }
