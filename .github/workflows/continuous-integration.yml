@@ -50,7 +50,7 @@ jobs:
     name: Nx Cloud - Setup Agents
     runs-on: ubuntu-latest
     outputs:
-      matrix: ${{ steps.set-agents-matrix.matrix }}
+      matrix: ${{ steps.set-agents-matrix.outputs.matrix }}
     steps:
       - name: Set agents matrix
         id: set-agents-matrix
