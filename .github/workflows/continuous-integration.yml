@@ -20,4 +20,5 @@ jobs:
       number-of-agents: 3
       command: >
         pnpm nx affected --parallel 3 --target lint:prettier &
-        pnpm nx affected --parallel 3 --target lint:eslint
+        pnpm nx affected --parallel 3 --target lint:eslint &
+        pnpm nx affected --parallel 3 --target lint:typescript &

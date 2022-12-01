@@ -6,7 +6,8 @@
   },
   "scripts": {
     "lint:eslint": "eslint --max-warnings 0 .",
-    "lint:prettier": "prettier --check ."
+    "lint:prettier": "prettier --check .",
+    "lint:typescript": "tsc --noEmit"
   },
   "dependencies": {
     "@html-eslint/eslint-plugin": "0.15.0",
@@ -26,6 +27,7 @@
     "eslint-plugin-jsonc": "2.5.0",
     "eslint-plugin-jsx-a11y": "6.6.1",
     "eslint-plugin-markdownlint": "0.4.0",
+    "eslint-plugin-mdx": "2.0.5",
     "eslint-plugin-no-secrets": "0.8.9",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "6.1.1",
@@ -41,6 +43,7 @@
   },
   "devDependencies": {
     "@moneyhut/typescript-config": "workspace:*",
+    "@types/eslint": "8.4.10",
     "@types/node": "18.11.9"
   }
 }

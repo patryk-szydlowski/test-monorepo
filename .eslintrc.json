@@ -5,6 +5,7 @@
     "@moneyhut/eslint-config/yaml",
     "@moneyhut/eslint-config/toml",
     "@moneyhut/eslint-config/markdown",
+    "@moneyhut/eslint-config/mdx",
     "@moneyhut/eslint-config/prettier"
   ],
   "root": true
