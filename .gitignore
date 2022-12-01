@@ -294,3 +294,5 @@ fabric.properties
 .idea/
 .vscode/
 .fleet/
+
+nx-cloud.env

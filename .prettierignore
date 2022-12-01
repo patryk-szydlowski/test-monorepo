@@ -295,6 +295,8 @@ fabric.properties
 .vscode/
 .fleet/
 
+nx-cloud.env
+
 # Include Github directory
 !.github/
 

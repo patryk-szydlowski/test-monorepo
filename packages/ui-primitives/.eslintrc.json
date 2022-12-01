@@ -1,10 +1,9 @@
 {
   "extends": [
     "@moneyhut/eslint-config",
+    "@moneyhut/eslint-config/typescript",
+    "@moneyhut/eslint-config/browser",
     "@moneyhut/eslint-config/json",
-    "@moneyhut/eslint-config/yaml",
-    "@moneyhut/eslint-config/toml",
-    "@moneyhut/eslint-config/markdown",
     "@moneyhut/eslint-config/prettier"
   ],
   "root": true

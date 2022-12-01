@@ -40,7 +40,7 @@
     "typescript": "*"
   },
   "devDependencies": {
-    "@moneyhut/typescript": "workspace:*",
+    "@moneyhut/typescript-config": "workspace:*",
     "@types/node": "18.11.9"
   }
 }
