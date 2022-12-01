@@ -1,10 +1,10 @@
 name: Setup environment
-description: Setup pnpm, NodeJS, install and cache dependencies
+description: Setup PNPM, NodeJS, install and cache dependencies
 
 runs:
   using: composite
   steps:
-    - name: Install pnpm
+    - name: Install PNPM
       uses: pnpm/action-setup@v2
 
     - name: Install NodeJS
@@ -15,4 +15,4 @@ runs:
 
     - name: Install dependencies
       shell: sh
-      run: pnpm install
+      run: pnpm install --prefer-offline --frozen-lockfile
