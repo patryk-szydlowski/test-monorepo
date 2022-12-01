@@ -66,7 +66,7 @@ jobs:
     strategy:
       matrix:
         agent:
-          - ${{ needs.setup-agents-matrix.outputs.matrix }}
+          - ${{fromJson(needs.setup-agents-matrix.outputs.matrix)}}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -74,7 +74,7 @@ jobs:
       - name: Setup environment
         uses: ./.github/actions/setup-environment
 
-      - name: Start Nx agent ${{ matrix.agent }}
+      - name: Start NX Cloud agent ${{ matrix.agent }}
         run: pnpm nx-cloud start-agent
         env:
           NX_AGENT_NAME: ${{ matrix.agent }}
