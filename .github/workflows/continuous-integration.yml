@@ -15,6 +15,7 @@ jobs:
   continuous-integration:
     name: Continuous Integration
     uses: ./.github/workflows/run-on-nx-cloud.yml
+    secrets: inherit
     with:
       number-of-agents: 3
       command: >
