@@ -17,17 +17,6 @@ env:
   NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
 
 jobs:
-  setup-agents-matrix:
-    name: Nx Cloud - Setup Agents
-    runs-on: ubuntu-latest
-    outputs:
-      matrix: ${{ steps.set-agents-matrix.matrix }}
-    steps:
-      - name: Set agents matrix
-        run: |
-          AGENTS_JSON_ARRAY=$(node -e "console.log(JSON.stringify(Array.from(new Array(${{ env.NX_CLOUD_AGENT_COUNT }})).map((_, i) => i + 1)));")
-          echo "matrix=$AGENTS_JSON_ARRAY" >> $GITHUB_OUTPUT
-
   coordinator:
     name: Nx Cloud - Coordinator
     runs-on: ubuntu-latest
@@ -55,11 +44,23 @@ jobs:
         if: ${{ always() }}
         run: pnpm nx-cloud stop-all-agents
 
+  setup-agents-matrix:
+    name: Nx Cloud - Setup Agents
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-agents-matrix.matrix }}
+    steps:
+      - name: Set agents matrix
+        id: set-agents-matrix
+        run: |
+          AGENTS_JSON_ARRAY=$(node -e "console.log(JSON.stringify(Array.from(new Array(${{ env.NX_CLOUD_AGENT_COUNT }})).map((_, i) => i + 1)));")
+          echo $AGENTS_JSON_ARRAY
+          echo "matrix=$AGENTS_JSON_ARRAY" >> $GITHUB_OUTPUT
+
   agents:
     name: Nx Cloud - Agent ${{ matrix.agent }}
     runs-on: ubuntu-latest
-    needs:
-      - setup-agents-matrix
+    needs: setup-agents-matrix
     strategy:
       matrix:
         agent:
