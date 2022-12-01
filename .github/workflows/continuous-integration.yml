@@ -4,20 +4,21 @@ on:
     branches:
       - main
   pull_request:
-    branches:
-      - "**"
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
-  cancel-in-progress: true
 
 jobs:
-  continuous-integration:
-    name: Continuous Integration
-    uses: ./.github/workflows/run-on-nx-cloud.yml
-    secrets: inherit
+  main:
+    name: Nx Cloud - Main Job
+    uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.8
     with:
       number-of-agents: 3
-      command: >
-        pnpm nx affected --parallel 3 --target lint:prettier &
-        pnpm nx affected --parallel 3 --target lint:eslint
+      parallel-commands: |
+        npx nx-cloud record -- npx nx workspace-lint
+        npx nx-cloud record -- npx nx format:check
+      parallel-commands-on-agents: |
+        npx nx affected --target=lint:eslint --parallel=3 & npx nx affected --target=lint:prettier --parallel=3
+
+  agents:
+    name: Nx Cloud - Agents
+    uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.8
+    with:
+      number-of-agents: 3
