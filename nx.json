@@ -21,6 +21,7 @@
   "tasksRunnerOptions": {
     "default": {
       "options": {
+        "accessToken": "YWExNDBiNDAtZGVlYS00NTExLWFiOTItZGZiNTJmNDMxZWM1fHJlYWQtd3JpdGU=",
         "cacheableOperations": ["lint:eslint", "lint:prettier", "lint:typescript", "build"],
         "canTrackAnalytics": false
       },
