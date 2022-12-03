@@ -34,3 +34,4 @@ jobs:
         pnpm nx affected --parallel 3 --target lint:prettier &
         pnpm nx affected --parallel 3 --target lint:eslint &
         pnpm nx affected --parallel 3 --target lint:typescript &
+        pnpm nx affected --parallel 3 --target build &
