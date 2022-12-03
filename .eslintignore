@@ -295,6 +295,13 @@ fabric.properties
 .vscode/
 .fleet/
 
+# Ignore SolidJS cache
+.solid/
+
+# Ignore generated Clouflare worker
+**/functions/\[\[path\]\].js
+
+# Nx environment file
 nx-cloud.env
 
 # Include Github directory

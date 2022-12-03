@@ -1,8 +1,0 @@
-{
-  "extends": [
-    "@moneyhut/eslint-config",
-    "@moneyhut/eslint-config/json",
-    "@moneyhut/eslint-config/prettier"
-  ],
-  "root": true
-}

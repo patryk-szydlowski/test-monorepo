@@ -21,6 +21,7 @@ module.exports = defineConfig({
               "name",
               "description",
               "private",
+              "type",
               "packageManager",
               "engines",
               "scripts",

@@ -1,0 +1,5 @@
+# Ignore SolidJS cache
+.solid/
+
+# Ignore generated Clouflare worker
+**/functions/\[\[path\]\].js

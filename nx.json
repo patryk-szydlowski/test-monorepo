@@ -8,6 +8,7 @@
     "build": {
       "dependsOn": ["^build"]
     },
+    "dev": {},
     "lint:eslint": {
       "inputs": [
         "default",
@@ -24,6 +25,9 @@
     },
     "lint:typescript": {
       "inputs": ["default", "{workspaceRoot}/configs/typescript-config/*"]
+    },
+    "preview": {
+      "dependsOn": ["build"]
     }
   },
   "tasksRunnerOptions": {
@@ -35,5 +39,8 @@
       },
       "runner": "@nrwl/nx-cloud"
     }
+  },
+  "workspaceLayout": {
+    "appsDir": "apps"
   }
 }
