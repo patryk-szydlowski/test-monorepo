@@ -9,7 +9,7 @@ on:
       number-of-agents:
         type: number
         required: true
-      command:
+      run:
         type: string
         required: true
 
@@ -37,8 +37,8 @@ jobs:
       - name: Start NX Cloud agents
         run: pnpm nx-cloud start-ci-run
 
-      - name: Run workflow command
-        run: ${{ inputs.command }}
+      - name: Run workflow
+        run: ${{ inputs.run }}
 
       - name: Stop NX Cloud agents
         if: ${{ always() }}

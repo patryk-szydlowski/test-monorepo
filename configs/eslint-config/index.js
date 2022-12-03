@@ -45,13 +45,13 @@ module.exports = defineConfig({
       ],
       rules: {
         "sort-keys": "off",
+        "sort-imports": "off",
         "import/first": "error",
         "import/no-deprecated": "error",
         "import/no-mutable-exports": "error",
         "import/no-cycle": "error",
-        "import/no-internal-modules": "error",
+        "import/no-internal-modules": ["error", { forbid: ["./**/*"] }],
         "import/no-unused-modules": "error",
-        "import/no-relative-parent-imports": "error",
         "import/no-self-import": "error",
         "import/no-useless-path-segments": "error",
         "import/newline-after-import": "error",
@@ -69,6 +69,7 @@ module.exports = defineConfig({
       },
       settings: {
         "import/extensions": [".js", ".mjs", ".jsx", "*.ts", "*.tsx"],
+        "import/resolver": { typescript: {} },
       },
     },
   ],

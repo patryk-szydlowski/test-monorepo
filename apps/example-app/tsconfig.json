@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "~/*": ["src/*"] }
+  },
+  "extends": "@moneyhut/typescript-config/solid.json"
+}

@@ -4,9 +4,9 @@
     "@moneyhut/eslint-config/json",
     "@moneyhut/eslint-config/yaml",
     "@moneyhut/eslint-config/toml",
-    "@moneyhut/eslint-config/markdown",
     "@moneyhut/eslint-config/mdx",
-    "@moneyhut/eslint-config/prettier"
+    "@moneyhut/eslint-config/prettier",
+    "@moneyhut/eslint-config/markdown"
   ],
   "root": true
 }

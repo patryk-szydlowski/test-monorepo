@@ -12,13 +12,26 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  setup-environment:
+    name: Setup environment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-environment
+
   continuous-integration:
     name: Continuous Integration
     uses: ./.github/workflows/run-on-nx-cloud.yml
     secrets: inherit
+    needs:
+      - setup-environment
     with:
       number-of-agents: 3
-      command: >
+      run: >
         pnpm nx affected --parallel 3 --target lint:prettier &
         pnpm nx affected --parallel 3 --target lint:eslint &
         pnpm nx affected --parallel 3 --target lint:typescript &
+        pnpm nx affected --parallel 3 --target build &

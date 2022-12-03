@@ -1,0 +1,27 @@
+{
+  "name": "@moneyhut/example-app",
+  "type": "module",
+  "scripts": {
+    "dev": "solid-start dev",
+    "build": "solid-start build",
+    "preview": "solid-start start",
+    "lint:eslint": "eslint --max-warnings 0 .",
+    "lint:prettier": "prettier --check .",
+    "lint:typescript": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@solidjs/meta": "0.28.2",
+    "@solidjs/router": "0.5.1",
+    "solid-js": "1.6.2",
+    "solid-start": "0.2.7",
+    "solid-start-cloudflare-pages": "0.2.7",
+    "undici": "5.13.0"
+  },
+  "devDependencies": {
+    "@moneyhut/eslint-config": "workspace:*",
+    "@moneyhut/typescript-config": "workspace:*",
+    "typescript": "*",
+    "vite": "*",
+    "wrangler": "*"
+  }
+}

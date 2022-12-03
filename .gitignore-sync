@@ -8,6 +8,5 @@ Global/JetBrains.gitignore
 
 [local]
 configs/gitignore/ide.gitignore
-
-[inline]
-nx-cloud.env
+configs/gitignore/apps.gitignore
+configs/gitignore/nx.gitignore
