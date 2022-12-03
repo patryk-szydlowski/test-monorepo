@@ -9,7 +9,7 @@ on:
       number-of-agents:
         type: number
         required: true
-      command:
+      run:
         type: string
         required: true
 
@@ -17,6 +17,7 @@ env:
   NX_CLOUD_DISTRIBUTED_EXECUTION: true
   NX_BRANCH: ${{ github.event.number || github.ref_name }}
   NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+  FORCE_COLOR: true
 
 jobs:
   coordinator:
@@ -37,8 +38,8 @@ jobs:
       - name: Start NX Cloud agents
         run: pnpm nx-cloud start-ci-run
 
-      - name: Run workflow command
-        run: ${{ inputs.command }}
+      - name: Run workflow
+        run: ${{ inputs.run }}
 
       - name: Stop NX Cloud agents
         if: ${{ always() }}
